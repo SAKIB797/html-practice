@@ -1,0 +1,130 @@
+<!-- ---
+    **accordion with html and css only***
+    ***there is no use of js*****
+
+-->
+
+
+<head>
+    <style>
+        @keyframes details-show {
+            from {
+                opacity: 0;
+                transform: var(--details-translate, translateY(-0.5em));
+            }
+        }
+
+        details[open]>*:not(summary) {
+            animation: details-show 0.5s ease-in-out;
+        }
+
+        body {
+            margin: 0%;
+        }
+
+        details>summary {
+            cursor: pointer;
+            list-style-type: none;
+            margin: 0;
+            line-height: 1.6;
+            padding: 18px;
+            font-size: 15px;
+            background-color: #eee;
+            font-family: Verdana, sans-serif;
+
+        }
+
+        details>summary:hover,
+        details>summary:active {
+            background-color: #ccc;
+        }
+
+        details>summary>li {
+            float: right;
+            list-style-type: '➕';
+            margin-right: 10px;
+        }
+
+        details[open]>summary>li {
+            float: right;
+            list-style-type: '➖';
+            margin-right: 10px;
+        }
+
+        p {
+            margin: 0;
+            padding: 18px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <details>
+        <summary>First<li></li>
+        </summary>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+            est
+            laborum.
+            With some example text shown when expanded.
+
+        </p>
+    </details>
+    <details>
+        <summary>Second<li></li>
+        </summary>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+            est
+            laborum.
+            With some example text shown when expanded.
+
+        </p>
+    </details>
+    <details>
+        <summary>Third<li></li>
+        </summary>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+            est
+            laborum.
+            With some example text shown when expanded.
+
+        </p>
+    </details>
+    <details>
+        <summary>Fourth<li></li>
+        </summary>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+            est
+            laborum.
+            With some example text shown when expanded.
+
+        </p>
+    </details>
+
+
+</body>
