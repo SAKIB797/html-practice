@@ -1,4 +1,4 @@
-# HTML PRACTICE
+# HTML PRACTICES
 This repository is for practicing HTML to improve web development skills.  
 Additionally, I am enhancing my programming abilities in C and JavaScript.
 ## Author Information
