@@ -1,26 +1,21 @@
-<!----------- I will complete it after learning js fully-------->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS Calculator</title>
 
   <style>
     body {
       margin: 0;
-
     }
 
     table {
-
       width: 50vw;
       height: 50vh;
       margin: auto;
       margin-top: 10vh;
-
       text-align: center;
       border-collapse: collapse;
     }
@@ -35,9 +30,26 @@
     td:focus {
       background: greenyellow;
     }
+ .display:hover{
+  background: white;
 
+ }
+ .display{
+ 
+ overflow: hidden;
+ padding: 0 0 0 10px;
+ }
     #dis:hover {
       background-color: white;
+    }
+    .dis{
+      
+      width: 100%;
+     
+      border: none;
+   
+      outline:none;
+      padding: 10px 0 10px 0;
     }
   </style>
 
@@ -46,40 +58,50 @@
 <body>
   <table border="1">
     <tr>
-      <td colspan="3" clsss="dis" id="dis"></td>
-      <td clsss="" id="" onclick="clear()">C</td>
+      <td colspan="3" class="display"> <input  class="dis" id="dis" ></td>
+      <td class="" id="" onclick="clearDisplay()">C</td>
     </tr>
     <tr>
-      <td clsss="" id="" onclick="calc()">1</td>
-      <td clsss="" id="" onclick="calc()">2</td>
-      <td clsss="" id="" onclick="calc()">3</td>
-      <td clsss="" id="" onclick="calc()">+</td>
+      <td class="" id="" onclick="appendToDisplay(1)">1</td>
+      <td class="" id="" onclick="appendToDisplay(2)">2</td>
+      <td class="" id="" onclick="appendToDisplay(3)">3</td>
+      <td class="" id="" onclick="appendToDisplay('+')">+</td>
     </tr>
     <tr>
-      <td clsss="" id="" onclick="calc()">4</td>
-      <td clsss="" id="" onclick="calc()">5</td>
-      <td clsss="" id="" onclick="calc()">6</td>
-      <td clsss="" id="" onclick="calc()">-</td>
+      <td class="" id="" onclick="appendToDisplay(4)">4</td>
+      <td class="" id="" onclick="appendToDisplay(5)">5</td>
+      <td class="" id="" onclick="appendToDisplay(6)">6</td>
+      <td class="" id="" onclick="appendToDisplay('-')">-</td>
     </tr>
     <tr>
-      <td clsss="" id="" onclick="calc()">7</td>
-      <td clsss="" id="" onclick="calc()">8</td>
-      <td clsss="" id="" onclick="calc()">9</td>
-      <td clsss="" id="" onclick="calc()">×</td>
+      <td class="" id="" onclick="appendToDisplay(7)">7</td>
+      <td class="" id="" onclick="appendToDisplay(8)">8</td>
+      <td class="" id="" onclick="appendToDisplay(9)">9</td>
+      <td class="" id="" onclick="appendToDisplay('*')">*</td>
     </tr>
     <tr>
-      <td clsss="" id="" onclick="calc()">0</td>
-      <td clsss="" id="" onclick="calc()">.</td>
-      <td clsss="" id="" onclick="equal()">=</td>
-      <td clsss="" id="" onclick="calc()">÷</td>
+      <td class="" id="" onclick="appendToDisplay(0)">0</td>
+      <td class="" id="" onclick="appendToDisplay('.')">.</td>
+      <td class="" id="" onclick="calculate()">=</td>
+      <td class="" id="" onclick="appendToDisplay('/')">/</td>
     </tr>
   </table>
 
-
   <script>
-    function calc(n) {
-      document.getElementById("dis").innerHTML = n;
+    function clearDisplay() {
+      document.getElementById("dis").value = '';
+    }
 
+    function appendToDisplay(value) {
+      document.getElementById("dis").value += value;
+    }
+
+    function calculate() {
+      try {
+        document.getElementById("dis").value = eval(document.getElementById("dis").value);
+      } catch (error) {
+        document.getElementById("dis").value = 'Error';
+      }
     }
   </script>
 </body>
