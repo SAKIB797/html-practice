@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            width: 80%;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .parent1 {
+            width: 150px;
+            height: 150px;
+         overflow: hidden;
+background-color: yellow;
+
+        }
+
+        .child1 {
+            background-color: lightblue;
+            width: 100%;
+            height: 100%;
+            transform: rotate(45deg);
+            text-align: center;
+            transition: 1ms ease-in-out;
+
+        }
+
+        .parent2 {
+            width: 150px;
+            height: 150px;
+            border: 1px solid;
+
+
+        }
+
+        .child2 {
+            background-color: lightblue;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: black;
+            clip-path: circle(50% at 0 0);
+            transition: all 2s ease;
+        }
+
+        .child2:hover {
+            clip-path: circle(100%);
+        }
+
+
+        .parent3 {
+            width: 150px;
+            height: 150px;
+            border: 1px solid;
+            perspective:200px;
+        }
+
+        .child3 {
+            width: 100%;
+            height: 100%;
+            background-color: lightblue;
+           transform: rotateX(45deg);
+           transition: all 3s ease;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <section class="parent1">
+        <section class="child1">
+
+        </section>
+    </section>
+
+    <section class="parent2">
+        <section class="child2">
+
+        </section>
+    </section>
+
+    <section class="parent3">
+        <section class="child3">
+
+        </section>
+    </section>
+
+<section class="bap">
+    <section>haha </section>
+    <button>hello</button>
+    <p class="para"></p>
+  
+</section>
+
+</body>
+
+</html>
